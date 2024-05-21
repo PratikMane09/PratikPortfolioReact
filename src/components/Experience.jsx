@@ -1,16 +1,16 @@
 import React from "react";
-import html from "../assets/html.png";
-import css from "../assets/css-3.svg";
-import js from "../assets/javascript.png";
-import react from "../assets/react.png";
-import tailwind from "../assets/tailwind.png";
+import html from "../assets/html.png.png";
+import css from "../assets/css.png";
+import js from "../assets/js.svg";
+import react from "../assets/logo192.png";
+import tailwind from "../assets/icons8-tailwind-css.svg";
 import node from "../assets/node.png";
-import redux from "../assets/redux.png";
-import git from "../assets/github.png";
-import md from "../assets/mongoDB.png";
+import redux from "../assets/icons8-redux.svg";
+import git from "../assets/icons8-github.svg";
+import md from "../assets/icons8-mongodb.svg";
 import java from "../assets/Java.png";
-import supa from "../assets/supabase.png";
-import sql from "../assets/sql.jpeg";
+import supa from "../assets/supabase-seeklogo.svg";
+import sql from "../assets/icons8-database-administrator-94 (1).png";
 const Experience = () => {
   return (
     <div name="skills" className="w-full lg:h-screen p-2">

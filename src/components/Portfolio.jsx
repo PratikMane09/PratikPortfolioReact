@@ -30,8 +30,7 @@ const Portfolio = () => {
       id: 4,
       src: port,
       demoLink: "/home",
-      demoCode:
-        "https://medium.com/@Pratik_Mane_9/never-lose-track-of-your-stuff-again-building-a-real-time-work-tracking-system-final-year-project-f3cf4ad0c4df",
+      demoCode: "https://github.com/PratikMane09/PratikPortfolioReact",
     },
     {
       id: 5,

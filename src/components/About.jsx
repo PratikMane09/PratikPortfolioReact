@@ -39,7 +39,7 @@ const About = () => {
           </Link>
         </div>
         <div
-          className="w-full h-full m-auto shadow-xl shadow-gray-400 
+          className="w-full h-full m-auto shadow-lg shadow-gray-300 
                     rounded-xl flex items-center justify-center p-4 
                     hover:scale-105 ease-in duration-300"
         >

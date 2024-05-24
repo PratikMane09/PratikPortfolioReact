@@ -66,7 +66,7 @@ const Contact = () => {
         <div className="grid grid-cols-6 gap-8">
           {/**left */}
 
-          <div className="col-span-6 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4">
+          <div className="col-span-6 lg:col-span-2 w-full h-full shadow-lg shadow-gray-300 rounded-xl p-4">
             <div className="lg:p-4 h-full">
               <div>
                 <img
@@ -93,27 +93,27 @@ const Contact = () => {
                 </p>
                 <div className="flex items-center justify-between py-4 max-w-[330px]">
                   <a href="https://www.linkedin.com/in/pratik-mane-09s09/">
-                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300">
+                    <div className="rounded-full shadow-lg shadow-gray-300 p-6 cursor-pointer hover:scale-105 ease-in duration-300">
                       <FaLinkedinIn />
                     </div>
                   </a>
                   <a href="https://github.com/PratikMane09">
-                    <div className="rounded-full shadow-lg shadow-gray-400 p-6  cursor-pointer hover:scale-105 ease-in duration-300">
+                    <div className="rounded-full shadow-lg shadow-gray-300 p-6  cursor-pointer hover:scale-105 ease-in duration-300">
                       <FaGithub />
                     </div>
                   </a>
                   <Link to={"contact"}>
-                    <div className="rounded-full shadow-lg shadow-gray-400 p-6  cursor-pointer hover:scale-105 ease-in duration-300">
+                    <div className="rounded-full shadow-lg shadow-gray-300 p-6  cursor-pointer hover:scale-105 ease-in duration-300">
                       <AiOutlineMail />
                     </div>
                   </Link>
                   <a href="https://drive.google.com/file/d/1rJ2Tz40ZD0aKvMkSWRBC-eSwOZslBZ49/view?usp=sharing">
-                    <div className="rounded-full shadow-lg shadow-gray-400 p-6  cursor-pointer hover:scale-105 ease-in duration-300">
+                    <div className="rounded-full shadow-lg shadow-gray-300 p-6  cursor-pointer hover:scale-105 ease-in duration-300">
                       <BsFillPersonFill />
                     </div>
                   </a>
                   <a href="https://medium.com/@Pratik_Mane_9">
-                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300">
+                    <div className="rounded-full shadow-lg shadow-gray-300 p-6 cursor-pointer hover:scale-105 ease-in duration-300">
                       <FaMediumM />
                     </div>
                   </a>
@@ -123,7 +123,7 @@ const Contact = () => {
           </div>
 
           {/** right*/}
-          <div className="col-span-6 lg:col-span-4 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
+          <div className="col-span-6 lg:col-span-4 w-full h-auto shadow-lg shadow-gray-300 rounded-xl lg:p-4">
             <div className="p-4">
               <form id="contactForm" onSubmit={handleSubmit}>
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
@@ -193,7 +193,7 @@ const Contact = () => {
         </div>
         <div className="flex justify-center py-12">
           <Link to={"home"}>
-            <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
+            <div className="rounded-full shadow-lg shadow-gray-300 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
               <HiOutlineChevronDoubleUp className="text-[#5651e5]" size={30} />
             </div>
           </Link>

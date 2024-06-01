@@ -3,10 +3,7 @@ import { Link } from "react-scroll";
 import pratik from "../assets/pratik.jpg";
 const About = () => {
   return (
-    <div
-      name="about"
-      className="w-full md:h-screen min-[320px]:mt-60 min-[500px]:mt-40 sm:mt-40  md:mt-0 p-2 flex items-center py-16"
-    >
+    <div name="about" className="max-w-[1240px] mx-auto px-2 py-16 md:h-screen">
       <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
         <div className="col-span-2">
           <p className="uppercase text-xl tracking-widest text-[#5651e5]">

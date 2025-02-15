@@ -16,13 +16,13 @@ const Home = () => {
           </h1>
           <h1 className="py-4 text-gray-800">A MERN Developer</h1>
           <p className="py-4 text-gray-700 max-w-[70%] m-auto">
-            I'm a MERN developer who links front-end and back-end technologies
-            to make high-performance web applications. I'm skilled at creating
-            user-friendly interfaces, improving server-side solutions, and
-            integrating databases. I pay close attention to details and love
-            finding innovative solutions for each project. I'm open to
-            connecting, working, and collaborating on exciting projects with
-            others.
+            Full-stack developer with proven experience in building modern web
+            applications using the MERN stack. Combining strong technical skills
+            with a passion for creating intuitive user experiences, I’ve
+            successfully delivered scalable solutions that drive business
+            growth. Looking to bring my expertise in React, Node.js, and cloud
+            technologies to a dynamic team where I can continue to grow while
+            making meaningful contributions to impactful projects.
           </p>
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
             <a
@@ -48,7 +48,7 @@ const Home = () => {
                 <AiOutlineMail />
               </div>
             </Link>
-            <a href="https://drive.google.com/file/d/1rJ2Tz40ZD0aKvMkSWRBC-eSwOZslBZ49/view?usp=sharing">
+            <a href="https://drive.google.com/file/d/1aaIQr4qsqkjHx-OVz4cd11LuXtz3TWpv/view?usp=sharing">
               <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-105 ease-in duration-300">
                 <BsFillPersonFill />
               </div>

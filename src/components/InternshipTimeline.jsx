@@ -1,56 +1,124 @@
 import React from "react";
-import { FaBriefcase, FaCalendarAlt, FaClock } from "react-icons/fa";
+import { Card, CardContent } from "@mui/material";
+import { Briefcase, Calendar, Clock, ChevronRight } from "lucide-react";
 
-const InternshipTimeline = () => {
+const ExperienceTimeline = () => {
+  const experiences = [
+    {
+      title: "Associate Software Development Engineer",
+      company: "Dossiefoyer Private Limited",
+      location: "Pune, India",
+      period: "Dec 2024 - Present",
+      achievements: {
+        "Frontend Development Excellence": [
+          "Developed high-performance web applications using Next.js, achieving 25% faster page load times",
+          "Implemented SSR and SSG, improving SEO scores by 35%",
+          "Architected responsive React components, resulting in 30% improvement in user engagement",
+          "Engineered reusable components with Redux for state management",
+          "Optimized API integration patterns, achieving 40% reduction in latency",
+        ],
+        "Backend Infrastructure Innovation": [
+          "Designed and deployed RESTful APIs using Node.js",
+          "Implemented RBAC system for enhanced security",
+          "Orchestrated MongoDB architecture with 50% faster query performance",
+          "Developed CI/CD pipelines using Jenkins and Docker",
+          "Implemented JWT-based authentication protocols",
+        ],
+        "Technical Leadership": [
+          "Led cross-functional team of 5 developers, delivering projects 15% ahead of schedule",
+          "Pioneered microservices architecture, improving scalability by 40%",
+          "Established coding standards, reducing onboarding time by 50%",
+          "Conducted bi-weekly code reviews and mentoring sessions",
+        ],
+      },
+    },
+    {
+      title: "Fullstack Developer Intern",
+      company: "Dossiefoyer Private Limited",
+      location: "Pune, India",
+      period: "Jun 2024 - Dec 2024",
+      schedule: "10:30 AM to 7:30 PM (Mon to Sat)",
+      achievements: {
+        "Technical Achievements": [
+          "Built and optimized Next.js pages and components",
+          "Developed responsive React components",
+          "Integrated RESTful APIs using Node.js",
+          "Collaborated on MongoDB database design",
+          "Implemented automated testing with 85% coverage",
+        ],
+        "Project Contributions": [
+          "Assisted in deployment automation, reducing manual efforts by 40%",
+          "Contributed to documentation and codebase maintenance",
+          "Participated in daily stand-ups and sprint planning",
+        ],
+      },
+    },
+  ];
+
   return (
-    <div
-      name="experince"
-      className="w-full min-h-screen p-2 pt-24 bg-gradient-to-b"
-    >
+    <div name="experince" className="w-full min-h-screen p-2 bg-gradient-to-b">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
-        <p className="text-xl tracking-widest uppercase text-[#5651e5]">
+        <p className="text-xl p-2 pt-24 tracking-widest uppercase text-[#5651e5]">
           Experience
         </p>
-        <div className="bg-white shadow-xl rounded-lg p-8 my-8">
-          <h3 className="text-3xl font-bold text-sky-600 mb-6">
-            Internship Experience
-          </h3>
-          <div className="relative border-l-4 border-sky-400 ml-3">
-            <div className="mb-8 ml-6">
-              <div className="absolute w-3 h-3 bg-sky-600 rounded-full mt-1.5 -left-1.5 border border-white"></div>
-              <div className="flex items-center mb-1">
-                <FaBriefcase className="text-sky-600 mr-2" />
-                <h3 className="text-xl font-semibold text-gray-900">
-                  Fullstack Developer – Intern
-                </h3>
-              </div>
-              <div className="mb-2 text-sky-700 font-medium">
-                Dossiefoyer Private Limited, Pune
-              </div>
-              <div className="mb-4 flex items-center text-gray-700">
-                <FaCalendarAlt className="mr-2" />
-                <time>Jun-2024 - Present</time>
-              </div>
-              <div className="mb-4 flex items-center text-gray-700">
-                <FaClock className="mr-2" />
-                <span>10:30AM to 7:30PM (Mon to Sat)</span>
-              </div>
-              <p className="mb-3 text-gray-800 font-medium">
-                Key Responsibilities:
-              </p>
-              <ul className="list-disc pl-5 text-gray-700 space-y-1">
-                <li>Frontend Development with React and React Native</li>
-                <li>Backend Development using Node.js and Java</li>
-                <li>API Design and Development</li>
-                <li>Database Management (MongoDB, MySQL, PostgreSQL)</li>
-                <li>Cloud Deployment (AWS, Azure, Google Cloud Platform)</li>
-              </ul>
-            </div>
-          </div>
+        <h2 className="py-4">Where I've Worked</h2>
+
+        <div className="space-y-8">
+          {experiences.map((exp, index) => (
+            <Card key={index} className="border-l-4 border-[#5651e5]">
+              <CardContent className="p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <Briefcase className="w-5 h-5 text-[#5651e5]" />
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    {exp.title}
+                  </h3>
+                </div>
+
+                <div className="ml-7 space-y-2 mb-4">
+                  <div className="text-lg font-medium text-[#5651e5]">
+                    {exp.company}
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-600">
+                    <Calendar className="w-4 h-4" />
+                    <span>{exp.period}</span>
+                  </div>
+                  {exp.schedule && (
+                    <div className="flex items-center gap-2 text-gray-600">
+                      <Clock className="w-4 h-4" />
+                      <span>{exp.schedule}</span>
+                    </div>
+                  )}
+                </div>
+
+                <div className="ml-7 space-y-6">
+                  {Object.entries(exp.achievements).map(
+                    ([category, items], idx) => (
+                      <div key={idx}>
+                        <h4 className="text-lg font-semibold text-gray-800 mb-2">
+                          {category}
+                        </h4>
+                        <ul className="space-y-2">
+                          {items.map((item, itemIdx) => (
+                            <li
+                              key={itemIdx}
+                              className="flex items-start gap-2"
+                            >
+                              <ChevronRight className="w-4 h-4 mt-1 text-[#5651e5] flex-shrink-0" />
+                              <span className="text-gray-700">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </div>
   );
 };
 
-export default InternshipTimeline;
+export default ExperienceTimeline;

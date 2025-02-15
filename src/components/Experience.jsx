@@ -11,7 +11,9 @@ import md from "../assets/icons8-mongodb.svg";
 import java from "../assets/Java.png";
 import supa from "../assets/supabase-seeklogo.svg";
 import sql from "../assets/icons8-database-administrator-94 (1).png";
-
+import nextjs from "../assets/next.js.svg";
+import jenkins from "../assets/jenkins.svg";
+import docker from "../assets/docker.jpg";
 const SkillCard = ({ skill }) => (
   <div className="p-6 bg-white shadow-md rounded-xl hover:scale-105 ease-in duration-300">
     <div className="grid grid-cols-2 gap-4 justify-center items-center">
@@ -35,6 +37,7 @@ const Experience = () => {
     { name: "HTML", logo: html },
     { name: "CSS", logo: css },
     { name: "JavaScript", logo: js },
+    { name: "Next.js", logo: nextjs },
     { name: "React", logo: react },
     { name: "TailwindCSS", logo: tailwind },
     { name: "Node JS", logo: node },
@@ -42,6 +45,8 @@ const Experience = () => {
     { name: "SQL", logo: sql },
     { name: "Redux", logo: redux },
     { name: "Github", logo: git },
+    { name: "Jenkins", logo: jenkins },
+    { name: "Docker", logo: docker },
     { name: "SupaBase", logo: supa },
     { name: "MongoDB", logo: md },
   ];

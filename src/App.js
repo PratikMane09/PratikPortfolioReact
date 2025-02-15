@@ -6,16 +6,18 @@ import Portfolio from "./components/Portfolio";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import InternshipTimeline from "./components/InternshipTimeline";
+import Footer from "./components/Footer";
 function App() {
   return (
     <>
       <Navbar />
       <Home />
       <About />
-      <Portfolio />
-      <InternshipTimeline />
       <Experience />
+      <InternshipTimeline />
+      <Portfolio />
       <Contact />
+      <Footer />
     </>
   );
 }

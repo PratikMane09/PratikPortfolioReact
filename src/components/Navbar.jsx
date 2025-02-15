@@ -18,10 +18,18 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll);
 
+    // Prevent body scroll when mobile menu is open
+    if (nav) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      document.body.style.overflow = 'unset';
     };
-  }, []);
+  }, [nav]);
 
   const links = [
     {
@@ -54,19 +62,19 @@ const Navbar = () => {
   const socialLinks = [
     {
       id: 1,
-      icon: <FaLinkedinIn />,
+      icon: <FaLinkedinIn size={20} />,
       href: "https://www.linkedin.com/in/pratik-mane-09s09/",
       label: "LinkedIn Profile",
     },
     {
       id: 2,
-      icon: <FaGithub />,
+      icon: <FaGithub size={20} />,
       href: "https://github.com/PratikMane09",
       label: "GitHub Profile",
     },
     {
       id: 3,
-      icon: <BsFillPersonFill />,
+      icon: <BsFillPersonFill size={20} />,
       href: "https://drive.google.com/file/d/1aaIQr4qsqkjHx-OVz4cd11LuXtz3TWpv/view?usp=sharing",
       label: "View Resume",
     },
@@ -128,22 +136,56 @@ const Navbar = () => {
         {nav ? <FaTimes size={24} /> : <FaBars size={24} />}
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Overlay */}
       {nav && (
         <div
-          className="fixed inset-0 bg-black/50 z-10 md:hidden"
+          className="fixed inset-0 bg-black/50 z-10 md:hidden transition-opacity duration-300"
           onClick={() => setNav(false)}
         >
+          {/* Mobile Menu Content */}
           <div
-            className="fixed right-0 top-0 w-3/4 h-full bg-white shadow-2xl p-8"
+            className="fixed right-0 top-0 w-3/4 h-full bg-white shadow-2xl transition-transform duration-300 transform translate-x-0"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex flex-col h-full">
-              <div className="mb-8">
-                <h2 className="text-2xl font-semibold text-[#5651e5] mb-6">
+            <div className="flex flex-col h-full overflow-y-auto">
+              {/* Mobile Header */}
+              <div className="px-6 py-8 border-b border-gray-100">
+                <h2 className="text-2xl font-bold text-[#5651e5] mb-4">
                   Pratik Mane
                 </h2>
-                <div className="flex space-x-4 mb-8">
+                <p className="text-gray-600 text-sm">
+                  Frontend Developer & UI/UX Designer
+                </p>
+              </div>
+
+              {/* Mobile Navigation Links */}
+              <nav className="px-6 py-6">
+                <ul className="space-y-6">
+                  {links.map(({ id, link, label }) => (
+                    <li
+                      key={id}
+                      className="block"
+                    >
+                      <Link
+                        onClick={() => setNav(false)}
+                        to={link}
+                        smooth
+                        duration={500}
+                        className="text-gray-700 hover:text-[#5651e5] text-lg font-medium capitalize block transition-colors duration-200"
+                      >
+                        {label || link}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+
+              {/* Mobile Social Links */}
+              <div className="mt-auto border-t border-gray-100 px-6 py-6">
+                <h3 className="text-sm font-medium text-gray-400 mb-4 uppercase tracking-wider">
+                  Connect with me
+                </h3>
+                <div className="flex space-x-5">
                   {socialLinks.map(({ id, icon, href, label }) => (
                     <a
                       key={id}
@@ -151,35 +193,16 @@ const Navbar = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={label}
-                      className="text-gray-500 hover:text-[#5651e5] transition-colors duration-300"
+                      className="text-gray-500 hover:text-[#5651e5] transition-colors duration-300 p-2"
                     >
                       {icon}
                     </a>
                   ))}
                 </div>
+                <p className="text-xs text-gray-400 mt-6">
+                  &copy; {new Date().getFullYear()} Pratik Mane
+                </p>
               </div>
-
-              <ul className="flex-1 space-y-4">
-                {links.map(({ id, link, label }) => (
-                  <li
-                    key={id}
-                    className="cursor-pointer capitalize text-lg text-gray-700 hover:text-[#5651e5] transition-colors duration-200"
-                  >
-                    <Link
-                      onClick={() => setNav(false)}
-                      to={link}
-                      smooth
-                      duration={500}
-                    >
-                      {label || link}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-
-              <p className="text-sm text-gray-500 mt-auto pt-8 border-t border-gray-100">
-                &copy; {new Date().getFullYear()} Pratik Mane
-              </p>
             </div>
           </div>
         </div>

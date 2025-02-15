@@ -154,7 +154,7 @@ const Navbar = () => {
                   Pratik Mane
                 </h2>
                 <p className="text-gray-600 text-sm">
-                  Frontend Developer & UI/UX Designer
+                  Full Stack Web Developer 
                 </p>
               </div>
 

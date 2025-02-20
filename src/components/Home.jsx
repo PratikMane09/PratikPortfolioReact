@@ -25,7 +25,7 @@ const Home = () => {
             making meaningful contributions to impactful projects.
           </p>
           <div className="flex items-center justify-center gap-3 sm:gap-4 md:gap-6 m-auto py-6">
-
+            <a
               href="https://www.linkedin.com/in/pratik-mane-09s09/"
               target="_blank"
               rel="noreferrer"
@@ -35,7 +35,7 @@ const Home = () => {
                 <FaLinkedinIn className="text-sm sm:text-base md:text-lg" />
               </div>
             </a>
-
+            <a
               href="https://github.com/PratikMane09"
               target="_blank"
               rel="noreferrer"
@@ -50,7 +50,7 @@ const Home = () => {
                 <AiOutlineMail className="text-sm sm:text-base md:text-lg" />
               </div>
             </Link>
-
+            <a
               href="https://drive.google.com/file/d/1aaIQr4qsqkjHx-OVz4cd11LuXtz3TWpv/view?usp=sharing"
               target="_blank"
               rel="noreferrer"
@@ -60,7 +60,7 @@ const Home = () => {
                 <BsFillPersonFill className="text-sm sm:text-base md:text-lg" />
               </div>
             </a>
-
+            <a
               href="https://medium.com/@Pratik_Mane_9"
               target="_blank"
               rel="noreferrer"
@@ -77,4 +77,4 @@ const Home = () => {
   );
 };
 
-export default Home
+export default Home;
